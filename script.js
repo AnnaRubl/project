@@ -1,29 +1,15 @@
-// const numberOfFilms = +prompt("How many films did you watched?", '');
-// const oneLastOfFilms = prompt("How your last films did you watched?", ''),
-// yourRatindOfFilms = +prompt("What so you rating this films?", '');
-// const personalMovieD5B = {
-//     count: numberOfFilms,
-//     movies: {
-//         film: oneLastOfFilms,
-//         rating: yourRatindOfFilms
-//     },
-//     actors: {},
-//     genres: [],
-//     privat: false
-// };
-// console.log(personalMovieD5B);
-const numberOfFilms = +prompt("How many films did you watched?", '');
-const personalMovieD5B = {
-    count: numberOfFilms,
-    movies: {},
-    actors: {},
-    genres: [],
-    privat: false
+let select = document.querySelector("select"),
+    html = document.querySelector("html");
+
+document.body.style.padding = "10px";
+
+function update(bgColor, textColor) {
+    html.style.backgroundColor = bgColor;
+    html.style.color = textColor;
+}
+
+select.onchange = function () {
+    select.value === "black"
+        ? update("black", "white")
+        : update("white", "black");
 };
-const a = prompt("How your last films did you watched?", ''),
-      b = +prompt("What so you rating this films?", ''),
-      c = prompt("How your last films did you watched?", ''),
-      d = +prompt("What so you rating this films?", '');
-personalMovieD5B.movies[a] = b; 
-personalMovieD5B.movies[c] = d;
-console.log(personalMovieD5B);
