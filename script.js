@@ -1,51 +1,84 @@
 "use strict"
 
-console.log( NaN || 2 || undefined );
-//2
-console.log( NaN && 2 && undefined );
-//nan
-console.log( 1 && 2 && 3 );
-//3
-console.log( !1 && 2 || !3 );
-//false
-console.log( 25 || null && !3 );
-//25
-console.log( NaN || null || !3 || undefined || 5);
-//5
-console.log( NaN || null && !3 && undefined || 5);
-//5
-console.log( 5 === 5 && 3 > 1 || 5 );
-//true
+//while
+// let num = 50;
+// while (num <= 55) {
+//     console.log(num);
+//     num++;
+// }
 
-// const hamburger = 3;
-// const fries = 3;
-// const cola = 0;
-// const nuggets = 2;
+//do ... while
+// do {
+//     console.log(num);
+//     num++;
+// }
+// while (num < 55)
 
-// if (hamburger === 3 && cola || fries === 3 && nuggets) {
-//     console.log('Done!')
-// };
-//true
-//Done!
+// for (let i = 1; i < 8; i++) {
+//     if (i === 6) {
+//         // break;
+//         continue;
+//     }
+    
+//     console.log(i);
+// }
 
-// let hamburger;
-//const - can't to have undefiend(condition)
-// const fries = NaN,
-//       cola = 0,
-//       nuggets = 2;
+// for (let i = 0; i < 10; i++) {
 
-// if (hamburger || cola || fries === 3 || nuggets) {
-//     console.log('Done!')
-// };
-//true
-//2
+//     // if true, skip the rest of the loop body
+//     if (i % 2 == 0) continue;
+  
+//     console.log(i); // 1, then 3, 5, 7, 9
+//   }
+// // the same
+//   for (let i = 0; i < 10; i++) {
 
-let hamburger;
-const fries = NaN,
-      cola = 0,
-      nuggets = 2;
+//     if (i % 2) {
+//       alert( i );
+//     }
+  
+//   }
 
-if (hamburger && cola || fries === 3 && nuggets) {
-    console.log('Done!')
-};
-//no result
+// for (let i = 0; i < 3; i++) {
+//     console.log(i);
+//     for (let j = 0; j < 3; j++) {
+//         console.log(j);
+        
+//     }
+// }
+
+// *
+// **
+// ***
+// ****
+// *****
+// ******
+
+// let result = '';
+// const length = 10;
+
+// for (let i = 1; i < length; i++) {
+
+//     for (let j = 0; j < i; j++) {
+//         result += '*';
+//     }
+//     result += '\n';
+// }
+// console.log(result);
+
+
+let result = '';
+const length = 10;
+
+
+first: for (let i = 0; i < 3; i++) {
+    console.log(`First level: ${i}`);
+    for (let j = 0; j < 3; j++) {
+        console.log(`Second level: ${j}`);
+        for (let k = 0; k < 3; k++) { 
+            if (k === 2) continue first;
+            console.log(`Third level: ${k}`);
+        }
+    }
+}
+
